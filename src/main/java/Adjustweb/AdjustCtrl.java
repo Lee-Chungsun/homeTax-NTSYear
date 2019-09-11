@@ -7,7 +7,9 @@ public void ntsYearEndAdjust(HttpServletRequest request, HttpServletResponse res
 	JSONParser jsonParser = new JSONParser();
 	JSONObject jsonObject = (JSONObject) jsonParser.parse(readBody(request));
 	
-	  
+	----- ftp 접속정보 받아 파일 리스트가져오는 부분-----
+		
+		
     	Set<String> files = ftpFileList(param);
     	for(String file : files){
 		param.put("FILE_NM", file);
